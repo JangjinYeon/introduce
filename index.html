@@ -282,28 +282,61 @@ body {
 
 /* ── REVIEWS ── */
 .rev-wrap { background: var(--cream); }
-.rev-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.rev-card {
-  background: white; border: 1px solid rgba(232,132,154,.25);
-  border-radius: 18px; padding: 24px;
-  transition: transform .3s, box-shadow .3s;
-  display: flex; flex-direction: column;
-}
-.rev-card:first-child {
-  grid-column: 1 / -1;
-  background: linear-gradient(135deg, var(--pink-lt), #FFF4F7);
-}
-.rev-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(232,132,154,.25); }
-.stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-bottom: 10px; }
-.rev-text { font-size: 13.5px; line-height: 1.9; color: var(--mid); margin-bottom: 14px; word-break: keep-all; flex: 1; }
-.rev-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-.rev-tag {
-  background: white; border: 1px solid var(--pink-lt);
-  border-radius: 50px; padding: 4px 12px;
-  font-size: 11px; color: var(--mid); font-weight: 500;
-}
-.rev-author { font-size: 12px; color: var(--muted); border-top: 1px solid rgba(232,132,154,.3); padding-top: 12px; }
 
+/* 슬라이더 전체를 감싸는 컨테이너 */
+.rev-slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 30px;
+}
+
+/* 가로 스크롤이 일어나는 프레임 */
+.rev-grid { 
+  display: flex; 
+  gap: 20px; 
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 20px;
+}
+
+/* 하단 스크롤바 숨기기 (선택사항, 깔끔한 디자인용) */
+.rev-grid::-webkit-scrollbar { display: none; }
+.rev-grid { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* 슬라이딩 될 리뷰 이미지 카드 */
+.rev-img-card {
+  flex: 0 0 320px; /* PC/모바일에서 보여줄 이미지 카드의 가로 너비 */
+  scroll-snap-align: center;
+  background: white;
+  border: 1px solid rgba(232,132,154,.25);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(232,132,154,.1);
+  transition: transform .3s, box-shadow .3s;
+}
+.rev-img-card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 10px 24px rgba(232,132,154,.25); 
+}
+
+/* 카드 내부 이미지 스타일 */
+.rev-img-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ════ MOBILE (≤640px) ════ 내의 .rev-grid 관련 스타일 수정 */
+@media (max-width: 640px) {
+  /* 기존 .rev-grid와 .rev-card:first-child 스타일은 지우거나 아래처럼 유지 */
+  .rev-img-card {
+    flex: 0 0 280px; /* 모바일에서는 카드가 살짝 더 작게 보여서 다음 카드가 있음을 암시 */
+  }
+}
 /* ── CTA ── */
 .cta-wrap { background: linear-gradient(150deg, var(--pink-dk), #B03060); }
 .cta-inner { max-width: 960px; margin: 0 auto; padding: 72px 24px; text-align: center; }
@@ -659,44 +692,35 @@ footer a { color: rgba(255,255,255,.6); text-decoration: none; }
   </div>
 </div>
 
-<!-- ══ REVIEWS ══ -->
 <div class="rev-wrap">
   <div class="sec">
     <span class="sec-label">실제 후기</span>
     <h2 class="sec-title">고객님들의 진짜 후기</h2>
-    <div class="rev-grid">
-      <div class="rev-card">
-        <div class="stars">★★★★★</div>
-        <p class="rev-text">
-          아나운서 톤의 여성 사회자님이셨으면 좋겠다고 생각했는데 제 취향저격~ 기존 영상으로 분위기, 진행스타일 알 수 있어서 당일에 뵀지만 걱정 안 했어요~ 소규모 돌잔치라 장소는 협소한데 하객이 넘치게 와버려서 어수선했는데 깔끔한 진행 덕에 제가 원하던 그 분위기 그대로였습니다. 돌잔치 장소의 음향장치가 좋지 않아서 많이 어려우셨을텐데, 웃으시면서 저희의 실수도 센스있게 넘겨주심에 감동받았습니다. 정말 다시 한번 감사드리고 어려운 걸음 하셔서 진심으로 축하해주셔서 감동이었습니다. 항상 행복하세요.
-        </p>
-        <div class="rev-tags">
-          <span class="rev-tag">가격 대비 만족</span>
-          <span class="rev-tag">약속 시간 엄수</span>
-          <span class="rev-tag">요청사항 정확히 반영</span>
-          <span class="rev-tag">응답이 빠름</span>
-          <span class="rev-tag">응대가 친절함</span>
+    
+    <div class="rev-slider-container">
+      <div class="rev-grid">
+        
+        <div class="rev-img-card">
+          <img src="bot_1.jpeg" alt="고객 후기 1">
         </div>
-        <div class="rev-author">⭐ 행사 MC 5.0 만점 후기 &nbsp;|&nbsp; <span style="color:var(--pink-dk);font-weight:600;">크몽 후기 발췌</span></div>
-      </div>
-      <div class="rev-card">
-        <div class="stars">★★★★★</div>
-        <p class="rev-text">
-          오늘 일찍 와주셔서 미리 기다려주시고 깔끔하게 진행해주셔서 너무 감사합니다! 너무 정신이 없었는데 사회자님 없었으면 큰일 날 뻔했어요. 너무 고생 많으셨습니다!
-        </p>
-        <div class="rev-author">⭐ 돌잔치 행사 고객님 &nbsp;|&nbsp; <span style="color:var(--pink-dk);font-weight:600;">숨고 후기 발췌</span></div>
-      </div>
-      <div class="rev-card">
-        <div class="stars">★★★★★</div>
-        <p class="rev-text">
-          애기가 울어서 너무너무 정신 없었는데 깔끔하게 진행해주셔서 감사해요 😊 덕분에 무사히 잘 끝낼 수 있었습니다. 다음에도 사회자 업무 하고 계시면 둘째도 또 부탁드릴게요 :)
-        </p>
-        <div class="rev-author">⭐ 재방문 의사 고객님 &nbsp;|&nbsp; <span style="color:var(--pink-dk);font-weight:600;">숨고 후기 발췌</span></div>
+        
+        <div class="rev-img-card">
+          <img src="bot_2.jpeg" alt="고객 후기 2">
+        </div>
+        
+        <div class="rev-img-card">
+          <img src="bot_3.jpeg" alt="고객 후기 3">
+        </div>
+
+        <div class="rev-img-card">
+          <img src="bot_4.jpeg" alt="고객 후기 4">
+        </div>
+
       </div>
     </div>
+    
   </div>
 </div>
-
 <!-- ══ CTA ══ -->
 <div class="cta-wrap">
   <div class="cta-inner">
