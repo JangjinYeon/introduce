@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아나운서 장진연 | 기업·공공기관 행사 MC</title>
+<meta name="description" content="경제방송 아나운서 장진연 — 기업·공공기관 행사, 포럼, 시상식 전문 MC. 제이와이 보이스랩 대표, 계산서 발행 가능.">
+<meta property="og:title" content="아나운서 장진연 | 기업·공공기관 행사 MC">
+<meta property="og:description" content="경제방송 아나운서 출신 행사 MC · 제이와이 보이스랩 대표 · 계산서 발행 가능">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --ink:#1c1c1c; --sub:#6f6b66; --faint:#a29d96;
+  --line:#e6e1d9; --bg:#fbfaf7; --bg2:#f3f0ea; --accent:#9a7b4f;
+  --serif:"Noto Serif KR",serif;
+  --sans:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased;font-weight:400}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.label{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:500}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.6rem,3vw,2.1rem);letter-spacing:-.02em;line-height:1.4;margin-top:14px}
+
+/* nav */
+nav{position:absolute;top:0;left:0;right:0;z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:var(--serif);font-size:1.05rem;letter-spacing:.02em}
+.menu{display:flex;gap:34px;font-size:.82rem;letter-spacing:.08em;color:var(--sub)}
+.menu a:hover{color:var(--ink)}
+@media(max-width:760px){.menu{display:none}}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;padding:96px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;width:100%}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,6vw,4.2rem);letter-spacing:-.02em;line-height:1.15;margin:22px 0 28px}
+.hero .role{font-size:1.02rem;color:var(--sub);line-height:1.9}
+.hero .rule{width:48px;height:1px;background:var(--ink);margin:36px 0}
+.hero .meta{font-size:.88rem;color:var(--sub);line-height:2}
+.hero .meta b{color:var(--ink);font-weight:500}
+.btn{display:inline-block;margin-top:40px;padding:15px 34px;border:1px solid var(--ink);font-size:.85rem;letter-spacing:.14em;transition:all .25s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;background:#eceae5}
+@media(max-width:860px){
+  .hero{min-height:auto;padding:100px 0 72px}
+  .hero .wrap{grid-template-columns:1fr;gap:44px}
+  .hero-photo{order:-1}
+}
+
+/* sections */
+section{padding:120px 0;border-top:1px solid var(--line)}
+@media(max-width:760px){section{padding:84px 0}}
+.head{margin-bottom:64px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.4fr;gap:72px}
+.about p.intro{font-family:var(--serif);font-size:1.15rem;line-height:2;color:#333}
+.points{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.points h3{font-size:.95rem;font-weight:600;margin-bottom:8px}
+.points p{font-size:.9rem;color:var(--sub)}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:20px}.points{grid-template-columns:1fr;gap:24px}}
+
+/* career */
+.career{display:grid;grid-template-columns:1fr 1.4fr;gap:72px}
+.major li{list-style:none;padding:22px 0;border-bottom:1px solid var(--line)}
+.major li:first-child{border-top:1px solid var(--ink)}
+.major b{font-family:var(--serif);font-weight:500;font-size:1.1rem}
+.major span{display:block;font-size:.85rem;color:var(--faint);margin-top:2px}
+.list li{list-style:none;display:grid;grid-template-columns:90px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.list li:first-child{border-top:1px solid var(--ink)}
+.list .yr{color:var(--faint);font-variant-numeric:tabular-nums;font-size:.88rem;padding-top:2px}
+.sub-label{font-size:.78rem;color:var(--sub);letter-spacing:.12em;margin-bottom:16px}
+@media(max-width:860px){.career{grid-template-columns:1fr;gap:56px}.list li{grid-template-columns:72px 1fr}}
+
+/* portfolio */
+.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:48px 32px}
+.video .thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#e4e1db}
+.video img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.video:hover img{transform:scale(1.03)}
+.video .thumb::after{content:"▶";position:absolute;right:16px;bottom:14px;width:40px;height:40px;border-radius:50%;background:rgba(251,250,247,.9);color:var(--ink);font-size:.7rem;display:grid;place-items:center;padding-left:2px}
+.video .cap{display:flex;justify-content:space-between;align-items:baseline;padding-top:16px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.video .cap b{font-weight:500;font-size:.98rem}
+.video .cap span{font-size:.75rem;letter-spacing:.14em;color:var(--faint)}
+.field{columns:3;column-gap:20px}
+.field figure{break-inside:avoid;margin-bottom:28px}
+.field img{width:100%;background:#eceae5}
+.field figcaption{font-size:.82rem;color:var(--sub);padding-top:10px;letter-spacing:.01em}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;background:#eceae5}
+@media(max-width:860px){.field{columns:2;column-gap:12px}.field figure{margin-bottom:20px}}
+@media(max-width:760px){.videos{grid-template-columns:1fr;gap:36px}.gallery{gap:10px}}
+
+/* booking */
+.booking{background:var(--bg2)}
+.book{display:grid;grid-template-columns:1fr 1.4fr;gap:72px}
+.book .desc{color:var(--sub);font-size:.95rem;margin-top:24px}
+.book dl{border-top:1px solid var(--ink)}
+.book dl div{display:grid;grid-template-columns:140px 1fr;padding:20px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.book dt{color:var(--faint);font-size:.85rem;padding-top:1px}
+@media(max-width:860px){.book{grid-template-columns:1fr;gap:40px}.book dl div{grid-template-columns:96px 1fr}}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg);border:0;text-align:center}
+.contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+.contact .label{color:#c7ab7f}
+.contact p.s{color:#9c968e;margin-top:16px;font-size:.92rem}
+.cl{display:flex;justify-content:center;flex-wrap:wrap;gap:0;margin-top:64px;border-top:1px solid #3a3835;border-bottom:1px solid #3a3835}
+.cl a{flex:1;min-width:220px;padding:30px 20px;transition:background .25s}
+.cl a+a{border-left:1px solid #3a3835}
+.cl a:hover{background:#262523}
+.cl small{display:block;font-size:.7rem;letter-spacing:.26em;color:#8a847c;margin-bottom:8px}
+.cl b{font-family:var(--serif);font-weight:400;font-size:1.1rem;letter-spacing:.02em}
+@media(max-width:760px){.cl{flex-direction:column}.cl a+a{border-left:0;border-top:1px solid #3a3835}}
+footer{background:var(--ink);color:#6e6a64;font-size:.75rem;letter-spacing:.06em;text-align:center;padding:0 24px 40px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="index.html" class="logo">Jang Jinyeon</a>
+    <div class="menu">
+      <a href="index.html">HOME</a><a href="#about">ABOUT</a><a href="#career">CAREER</a><a href="#portfolio">PORTFOLIO</a><a href="#field">ON SITE</a><a href="#contact">CONTACT</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="label">Announcer · Event MC</span>
+      <h1>아나운서<br>장진연</h1>
+      <p class="role">기업 · 공공기관 행사 전문 MC<br>경제방송 아나운서</p>
+      <div class="rule"></div>
+      <p class="meta"><b>제이와이 보이스랩</b> 대표<br>계산서 발행 가능</p>
+      <a href="#contact" class="btn">섭외 문의</a>
+    </div>
+    <div class="hero-photo"><img src="images/hero.jpg" alt="아나운서 장진연"></div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <span class="label">About</span>
+      <h2>행사의 격을 높이는<br>신뢰의 목소리</h2>
+    </div>
+    <div>
+      <p class="intro">경제방송 아나운서로 다져진 정확한 전달력과 차분한 진행으로, 기업과 공공기관의 중요한 자리를 품격 있게 이끌어 드립니다.</p>
+      <div class="points">
+        <div><h3>방송 전달력</h3><p>경제방송·공공기관 방송 진행 경험</p></div>
+        <div><h3>현장 대응력</h3><p>포럼, 시상식, 네트워킹 행사 등 다양한 형식</p></div>
+        <div><h3>간편한 정산</h3><p>사업자 계약 및 계산서 발행</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <div class="head"><span class="label">Career</span><h2>경력 및 진행 이력</h2></div>
+    <div class="career">
+      <div>
+        <p class="sub-label">MAJOR CAREER</p>
+        <ul class="major">
+          <li><b>서울경제TV 유튜브 진행자</b></li>
+          <li><b>EYTV 경제방송 아나운서</b></li>
+          <li><b>공공기관 시험방송 아나운서</b><span>2023 – 2026</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="sub-label">EXPERIENCE</p>
+        <ul class="list">
+          <li><span class="yr">2026</span><span>제6회 중앙 미디어아트 공모전 시상식 진행</span></li>
+          <li><span class="yr">2026</span><span>서울이니셔티브 네트워크 행사 진행</span></li>
+          <li><span class="yr">2026</span><span>성주올래 네트워킹데이 행사 진행</span></li>
+          <li><span class="yr">2026</span><span>투자인사이트 포럼 부스 행사 진행</span></li>
+          <li><span class="yr">2026</span><span>한성자동차 유튜브 진행</span></li>
+          <li><span class="yr">2026</span><span>헬스 의료기기 기업탐방 인터뷰 촬영</span></li>
+          <li><span class="yr">2026</span><span>아티스트 ‘민’ 데뷔 인터뷰 진행</span></li>
+          <li><span class="yr">2025</span><span>EYTV ‘부동산을 부탁해’ 방송 MC</span></li>
+          <li><span class="yr">2025</span><span>청소년 진로특강 다수 출강</span></li>
+          <li><span class="yr">2025</span><span>키즈스피치 아카데미 출강</span></li>
+          <li><span class="yr">2023–26</span><span>공공기관 시험방송 아나운서</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <div class="head"><span class="label">Portfolio</span><h2>진행 영상</h2></div>
+    <div class="videos">
+      <a class="video" href="https://youtube.com/shorts/z8U5Cjk9iG8" target="_blank" rel="noopener">
+        <div class="thumb"><img src="images/v-event.jpg" alt="기업행사 진행" loading="lazy"></div>
+        <div class="cap"><b>기업행사 진행</b><span>EVENT</span></div>
+      </a>
+      <a class="video" href="https://youtu.be/nfTld2fDRo8" target="_blank" rel="noopener">
+        <div class="thumb"><img src="images/v-hansung.jpg" alt="한성자동차 유튜브" loading="lazy"></div>
+        <div class="cap"><b>한성자동차 유튜브 채널</b><span>CORPORATE</span></div>
+      </a>
+      <a class="video" href="https://youtu.be/wXLdTNZdJaw" target="_blank" rel="noopener">
+        <div class="thumb"><img src="images/v-seoulecon.jpg" alt="서울경제TV 유튜브" loading="lazy"></div>
+        <div class="cap"><b>서울경제TV 유튜브</b><span>BROADCAST</span></div>
+      </a>
+      <a class="video" href="https://youtu.be/GBj5M_4vGXs" target="_blank" rel="noopener">
+        <div class="thumb"><img src="images/v-segye.jpg" alt="세계경제TV 투자리포트" loading="lazy"></div>
+        <div class="cap"><b>세계경제TV 투자리포트</b><span>BROADCAST</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="field">
+  <div class="wrap">
+    <div class="head"><span class="label">On Site</span><h2>현장 사진</h2></div>
+    <div class="field">
+      <figure><img src="images/f-podium.jpg" alt="기업행사 진행" loading="lazy"><figcaption>기업행사 진행</figcaption></figure>
+      <figure><img src="images/f-award.jpg" alt="제6회 중앙 미디어아트 공모전 시상식" loading="lazy"><figcaption>제6회 중앙 미디어아트 공모전 시상식</figcaption></figure>
+      <figure><img src="images/f-studio.jpg" alt="경제방송 스튜디오 진행" loading="lazy"><figcaption>경제방송 스튜디오 진행</figcaption></figure>
+      <figure><img src="images/f-networking.jpg" alt="네트워킹데이 행사 진행" loading="lazy"><figcaption>네트워킹데이 행사 진행</figcaption></figure>
+      <figure><img src="images/f-report.jpg" alt="서울경제TV 글로벌 투자리포트" loading="lazy"><figcaption>서울경제TV 글로벌 투자리포트</figcaption></figure>
+      <figure><img src="images/f-hansung.jpg" alt="한성자동차 유튜브 인터뷰" loading="lazy"><figcaption>한성자동차 유튜브 진행</figcaption></figure>
+    </div>
+    <div class="head" style="margin:112px 0 40px"><span class="label">Profile</span><h2>프로필 사진</h2></div>
+    <div class="gallery">
+      <img src="images/p-peach.jpg" alt="장진연 프로필" loading="lazy">
+      <img src="images/p-yellow.jpg" alt="장진연 프로필" loading="lazy">
+      <img src="images/p-pink.jpg" alt="장진연 프로필" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="booking">
+  <div class="wrap book">
+    <div>
+      <span class="label">Booking</span>
+      <h2>섭외 안내</h2>
+      <p class="desc">아나운서 장진연이 대표로 있는 제이와이 보이스랩을 통해 사업자 계약으로 진행됩니다.</p>
+    </div>
+    <dl>
+      <div><dt>사업자</dt><dd>제이와이 보이스랩 (대표 장진연)</dd></div>
+      <div><dt>증빙</dt><dd>계산서 발행 가능</dd></div>
+      <div><dt>진행 분야</dt><dd>기업 · 공공기관 행사, 포럼, 세미나, 시상식, 온라인 교육, 기업 영상 진행</dd></div>
+      <div><dt>절차</dt><dd>문의 → 견적 및 일정 확정 → 큐시트 검토 → 행사 진행 → 계산서 발행</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="label">Contact</span>
+    <h2>섭외 문의</h2>
+    <p class="s">행사 일시와 개요를 보내주시면 빠르게 회신드리겠습니다.</p>
+    <div class="cl">
+      <a href="tel:01056209762"><small>PHONE</small><b>010-5620-9762</b></a>
+      <a href="mailto:jinyeon02@naver.com"><small>EMAIL</small><b>jinyeon02@naver.com</b></a>
+      <a href="https://instagram.com/jin_ection" target="_blank" rel="noopener"><small>INSTAGRAM</small><b>@jin_ection</b></a>
+    </div>
+  </div>
+</section>
+<footer>© 2026 JY VOICE LAB · ANNOUNCER JANG JINYEON</footer>
+
+</body>
+</html>

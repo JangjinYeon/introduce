@@ -1,778 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>돌잔치 사회자 장진연</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아나운서 장진연 | MC</title>
+<meta name="description" content="아나운서 장진연 — 돌잔치 사회 · 기업/공공기관 행사 MC">
+<meta property="og:title" content="아나운서 장진연 | MC">
+<meta property="og:description" content="돌잔치 사회 · 기업/공공기관 행사 MC · 제이와이 보이스랩 대표">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  --pink:    #E8849A;
-  --pink-lt: #FAE8EC;
-  --pink-dk: #C8607A;
-  --cream:   #FDF8F3;
-  --dark:    #2A1F1D;
-  --mid:     #5C4A46;
-  --muted:   #9C8C88;
-  --gold:    #C9A96E;
-  --white:   #FFFFFF;
+:root{
+  --ink:#1c1c1c; --sub:#6f6b66; --faint:#a29d96;
+  --line:#e6e1d9; --bg:#fbfaf7; --accent:#9a7b4f; --pink:#C8607A;
+  --serif:"Noto Serif KR",serif;
+  --sans:Pretendard,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
 }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.75;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.label{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);font-weight:500}
 
-body {
-  font-family: 'Noto Sans KR', sans-serif;
-  background: var(--cream);
-  color: var(--dark);
-  -webkit-font-smoothing: antialiased;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  font-size: 14px;
-  line-height: 1.7;
-}
+header{padding:96px 0 56px;text-align:center}
+header h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,5vw,3.4rem);letter-spacing:-.02em;line-height:1.2;margin:18px 0 16px}
+header p{color:var(--sub);font-size:.98rem}
 
-/* ── HERO ── */
-.hero {
-  background: linear-gradient(160deg, #FFF0F4 0%, #FDF6F0 60%, #F5EDE8 100%);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 92vh;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; top: -100px; right: -100px;
-  width: 420px; height: 420px;
-  background: radial-gradient(circle, rgba(232,132,154,.35) 0%, transparent 70%);
-  border-radius: 50%; pointer-events: none;
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding-bottom:96px}
+.card{display:block;background:#fff;border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.08)}
+.card .ph{aspect-ratio:4/3;overflow:hidden;background:#eceae5}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .body{padding:28px 28px 32px}
+.card h2{font-family:var(--serif);font-weight:500;font-size:1.5rem;letter-spacing:-.01em;margin:10px 0 8px}
+.card p{color:var(--sub);font-size:.92rem}
+.card .go{display:inline-block;margin-top:22px;font-size:.8rem;letter-spacing:.14em;border-bottom:1px solid currentColor;padding-bottom:2px}
+.card.dol .label,.card.dol .go{color:var(--pink)}
+@media(max-width:760px){
+  header{padding:72px 0 40px}
+  .cards{grid-template-columns:1fr;gap:24px;padding-bottom:72px}
 }
 
-.hero-left {
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 60px 40px 60px 60px;
-  position: relative; z-index: 2;
-}
-
-.badge {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: white; border: 1.5px solid var(--pink-lt);
-  border-radius: 50px; padding: 7px 18px;
-  font-size: 11.5px; font-weight: 500; color: var(--mid);
-  letter-spacing: .04em; width: fit-content; margin-bottom: 24px;
-  box-shadow: 0 2px 12px rgba(232,132,154,.25);
-}
-.badge b { color: var(--pink-dk); }
-
-.hero-title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(22px, 2.6vw, 38px);
-  font-weight: 700; line-height: 1.55;
-  color: var(--dark); margin-bottom: 8px;
-  letter-spacing: -.01em;
-  word-break: keep-all;
-}
-.hero-title em { font-style: normal; color: var(--pink-dk); }
-
-.hero-en {
-  font-size: 11px; letter-spacing: .22em;
-  color: var(--muted); margin-bottom: 20px;
-  font-weight: 400; text-transform: uppercase;
-}
-
-.hero-desc {
-  font-size: 13.5px; line-height: 1.95;
-  color: var(--mid); font-weight: 400;
-  margin-bottom: 32px;
-  border-left: 3px solid var(--pink);
-  padding-left: 16px;
-  word-break: keep-all;
-}
-.hero-desc strong { color: var(--dark); font-weight: 700; }
-
-.hero-cta {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: linear-gradient(135deg, var(--pink-dk), #B84060);
-  color: white; text-decoration: none;
-  padding: 14px 28px; border-radius: 50px;
-  font-size: 13.5px; font-weight: 700;
-  width: fit-content;
-  box-shadow: 0 6px 22px rgba(200,96,122,.45);
-  transition: all .3s;
-  letter-spacing: .02em;
-}
-.hero-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(200,96,122,.6); }
-
-.hero-right {
-  position: relative;
-  display: flex; align-items: flex-end; justify-content: center;
-  overflow: hidden;
-}
-.hero-right::before {
-  content: '';
-  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 82%; height: 88%;
-  background: linear-gradient(160deg, var(--pink-lt), #FFF2F6);
-  border-radius: 58% 58% 0 0;
-}
-.hero-photo {
-  position: relative; z-index: 2;
-  width: 76%; max-width: 360px;
-  object-fit: cover;
-  filter: drop-shadow(0 16px 32px rgba(160,80,100,.2));
-  display: block;
-}
-.hero-nametag {
-  position: absolute; bottom: 44px; left: 24px; z-index: 3;
-  background: white; border-radius: 14px; padding: 12px 18px;
-  box-shadow: 0 4px 20px rgba(0,0,0,.1);
-}
-.hero-nametag .nm { font-family: 'Noto Serif KR', serif; font-size: 17px; font-weight: 700; color: var(--dark); }
-.hero-nametag .rl { font-size: 11px; color: var(--muted); letter-spacing: .07em; margin-top: 2px; }
-.star-badge {
-  position: absolute; top: 44px; right: 24px; z-index: 3;
-  background: var(--gold); color: white; border-radius: 50%;
-  width: 60px; height: 60px;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  font-size: 10px; font-weight: 700;
-  box-shadow: 0 4px 16px rgba(201,169,110,.45);
-  line-height: 1.3;
-}
-.star-badge .sn { font-size: 17px; line-height: 1.1; }
-
-/* ── SECTION ── */
-.sec {
-  padding: 64px 24px;
-  max-width: 960px;
-  margin: 0 auto;
-}
-.sec-label {
-  font-size: 10.5px; letter-spacing: .28em;
-  color: var(--pink-dk); text-transform: uppercase;
-  font-weight: 600; margin-bottom: 8px;
-  display: block;
-}
-.sec-title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(20px, 2.2vw, 28px);
-  font-weight: 700; line-height: 1.5;
-  color: var(--dark); margin-bottom: 36px;
-  letter-spacing: -.01em;
-  word-break: keep-all;
-}
-
-/* ── INTRO ── */
-.intro-wrap { background: white; }
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: start;
-}
-.intro-desc {
-  font-size: 14px; line-height: 2; color: var(--mid);
-  word-break: keep-all;
-}
-.intro-desc strong { color: var(--dark); font-weight: 700; }
-
-.cards { display: flex; flex-direction: column; gap: 14px; }
-.card {
-  background: var(--cream); border-radius: 14px;
-  padding: 18px 20px; border: 1px solid rgba(232,132,154,.25);
-  display: flex; gap: 12px; align-items: flex-start;
-  transition: transform .25s, box-shadow .25s;
-}
-.card:hover { transform: translateX(5px); box-shadow: 0 6px 18px rgba(232,132,154,.2); }
-.ci { font-size: 18px; margin-top: 1px; flex-shrink: 0; }
-.card h3 { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 3px; line-height: 1.4; }
-.card p { font-size: 12.5px; line-height: 1.75; color: var(--mid); font-weight: 300; word-break: keep-all; }
-
-/* ── CAREER ── */
-.career-wrap { background: linear-gradient(160deg, #2A1F1D 0%, #3A2825 100%); }
-.career-inner { max-width: 960px; margin: 0 auto; padding: 64px 24px; }
-.career-inner .sec-label { color: #F2C4CE; }
-.career-inner .sec-title { color: white; margin-bottom: 28px; }
-
-.career-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 32px;
-}
-.ci-box {
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.1);
-  border-radius: 14px; padding: 20px 18px;
-  transition: background .3s;
-}
-.ci-box:hover { background: rgba(242,196,206,.12); border-color: rgba(242,196,206,.28); }
-.ci-num { font-size: 26px; color: #F2C4CE; opacity: .5; line-height: 1; margin-bottom: 7px; font-weight: 300; }
-.ci-box h3 { font-size: 13px; font-weight: 500; color: rgba(255,255,255,.9); line-height: 1.5; word-break: keep-all; }
-
-.tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.tag {
-  background: rgba(255,255,255,.08);
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 50px; padding: 7px 16px;
-  font-size: 12px; color: rgba(255,255,255,.8);
-}
-
-/* ── GALLERY ── */
-.gal-wrap { background: var(--cream); }
-.gal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-.gi {
-  border-radius: 14px; overflow: hidden;
-  position: relative;
-}
-.gi img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s; }
-.gi:hover img { transform: scale(1.04); }
-.gi-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top, rgba(42,31,29,.38) 0%, transparent 55%);
-  opacity: 0; transition: opacity .3s;
-}
-.gi:hover .gi-overlay { opacity: 1; }
-
-/* 6장 레이아웃 */
-.gi:nth-child(1) { grid-column: span 2; aspect-ratio: 16/9; }
-.gi:nth-child(2) { aspect-ratio: 3/4; grid-row: span 1; }
-.gi:nth-child(3) { aspect-ratio: 4/3; }
-.gi:nth-child(4) { aspect-ratio: 4/3; }
-.gi:nth-child(5) { aspect-ratio: 4/3; }
-.gi:nth-child(6) { aspect-ratio: 4/3; }
-
-/* ── SKILLS ── */
-.skills-wrap { background: white; }
-.skills-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
-  align-items: start;
-}
-.bar-list { display: flex; flex-direction: column; gap: 18px; }
-.bar-top { display: flex; justify-content: space-between; margin-bottom: 6px; }
-.bar-label { font-size: 13.5px; font-weight: 500; color: var(--dark); }
-.bar-pct { font-size: 12px; color: var(--muted); }
-.bar-track { height: 6px; background: var(--pink-lt); border-radius: 10px; overflow: hidden; }
-.bar-fill { height: 100%; background: linear-gradient(90deg, var(--pink-dk), var(--gold)); border-radius: 10px; }
-
-.quote-box {
-  background: var(--cream); border-radius: 20px;
-  padding: 32px 28px; border: 1px solid rgba(232,132,154,.25);
-  position: relative; overflow: hidden;
-}
-.quote-box::before {
-  content: '"';
-  font-family: 'Noto Serif KR', serif; font-size: 100px;
-  color: rgba(232,132,154,.18); position: absolute;
-  top: -18px; left: 14px; line-height: 1; pointer-events: none;
-}
-.quote-box p {
-  font-family: 'Noto Serif KR', serif;
-  font-size: 15.5px; line-height: 1.95;
-  color: var(--dark); position: relative; z-index: 2;
-  margin-bottom: 18px; font-weight: 400;
-  word-break: keep-all;
-}
-.quote-box .attr { font-size: 12px; color: var(--muted); }
-
-/* ── REVIEWS ── */
-.rev-wrap { background: var(--cream); }
-
-/* 슬라이더 전체를 감싸는 컨테이너 */
-.rev-slider-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 10px 0 30px;
-}
-
-/* 가로 스크롤이 일어나는 프레임 */
-.rev-grid { 
-  display: flex; 
-  gap: 20px; 
-  overflow-x: auto; 
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  padding: 10px 20px;
-}
-
-/* 하단 스크롤바 숨기기 (선택사항, 깔끔한 디자인용) */
-.rev-grid::-webkit-scrollbar { display: none; }
-.rev-grid { -ms-overflow-style: none; scrollbar-width: none; }
-
-/* 슬라이딩 될 리뷰 이미지 카드 */
-.rev-img-card {
-  flex: 0 0 320px; /* PC/모바일에서 보여줄 이미지 카드의 가로 너비 */
-  scroll-snap-align: center;
-  background: white;
-  border: 1px solid rgba(232,132,154,.25);
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(232,132,154,.1);
-  transition: transform .3s, box-shadow .3s;
-}
-.rev-img-card:hover { 
-  transform: translateY(-5px); 
-  box-shadow: 0 10px 24px rgba(232,132,154,.25); 
-}
-
-/* 카드 내부 이미지 스타일 */
-.rev-img-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* ════ MOBILE (≤640px) ════ 내의 .rev-grid 관련 스타일 수정 */
-@media (max-width: 640px) {
-  /* 기존 .rev-grid와 .rev-card:first-child 스타일은 지우거나 아래처럼 유지 */
-  .rev-img-card {
-    flex: 0 0 280px; /* 모바일에서는 카드가 살짝 더 작게 보여서 다음 카드가 있음을 암시 */
-  }
-}
-/* ── CTA ── */
-.cta-wrap { background: linear-gradient(150deg, var(--pink-dk), #B03060); }
-.cta-inner { max-width: 960px; margin: 0 auto; padding: 72px 24px; text-align: center; }
-.cta-inner .sec-label { color: rgba(255,255,255,.65); }
-.cta-title {
-  font-family: 'Noto Serif KR', serif;
-  font-size: clamp(22px, 3.5vw, 38px); font-weight: 700;
-  color: white; line-height: 1.55; margin-bottom: 14px;
-  letter-spacing: -.01em; word-break: keep-all;
-}
-.cta-desc { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.8; margin-bottom: 36px; word-break: keep-all; }
-.cta-btn {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: white; color: var(--pink-dk);
-  text-decoration: none; padding: 16px 40px;
-  border-radius: 50px; font-size: 14.5px; font-weight: 700;
-  box-shadow: 0 8px 28px rgba(0,0,0,.2);
-  transition: all .3s;
-  letter-spacing: .02em;
-}
-.cta-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,.3); }
-.cta-sub { margin-top: 16px; font-size: 12.5px; color: rgba(255,255,255,.65); }
-.cta-sub a { color: white; text-decoration: none; font-weight: 500; }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--dark); color: rgba(255,255,255,.4);
-  text-align: center; padding: 28px 24px;
-  font-size: 12px; letter-spacing: .04em;
-}
-footer a { color: rgba(255,255,255,.6); text-decoration: none; }
-
-.divider { text-align: center; padding: 20px 0; font-size: 14px; color: var(--pink); letter-spacing: 12px; }
-
-/* ── FADE-IN ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-left > * { animation: fadeUp .7s ease both; }
-.hero-left > *:nth-child(1) { animation-delay: .1s; }
-.hero-left > *:nth-child(2) { animation-delay: .22s; }
-.hero-left > *:nth-child(3) { animation-delay: .34s; }
-.hero-left > *:nth-child(4) { animation-delay: .46s; }
-.hero-left > *:nth-child(5) { animation-delay: .58s; }
-.hero-right { animation: fadeUp .9s ease .2s both; }
-
-/* ════ MOBILE (≤640px) ════ */
-@media (max-width: 640px) {
-  .hero { grid-template-columns: 1fr; min-height: auto; }
-  .hero-right { order: -1; min-height: 340px; padding-top: 20px; }
-  .hero-right::before { width: 72%; height: 90%; }
-  .hero-photo { width: 62%; max-width: 220px; }
-  .hero-nametag { bottom: 20px; left: 16px; padding: 10px 14px; }
-  .hero-nametag .nm { font-size: 15px; }
-  .hero-left { padding: 36px 24px 52px; }
-
-  .intro-grid, .skills-grid { grid-template-columns: 1fr; gap: 28px; }
-  .career-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-
-  .gal-grid { grid-template-columns: 1fr 1fr; }
-  .gi:nth-child(1) { grid-column: 1 / -1; aspect-ratio: 16/9; }
-  .gi:nth-child(2) { aspect-ratio: 4/3; }
-  .gi:nth-child(3) { aspect-ratio: 4/3; }
-  .gi:nth-child(4) { aspect-ratio: 4/3; }
-  .gi:nth-child(5) { aspect-ratio: 4/3; }
-  .gi:nth-child(6) { aspect-ratio: 4/3; grid-column: 1 / -1; }
-
-  .rev-grid { grid-template-columns: 1fr; }
-  .rev-card:first-child { grid-column: 1; }
-
-  .sec { padding: 52px 20px; }
-  .career-inner { padding: 52px 20px; }
-  .cta-inner { padding: 60px 20px; }
-  .hero-title { font-size: 22px; }
-  .sec-title { font-size: 20px; }
-}
-
-/* ── TABLET (641–900px) ── */
-@media (min-width: 641px) and (max-width: 900px) {
-  .hero { min-height: auto; }
-  .hero-left { padding: 48px 32px 48px 48px; }
-  .career-grid { grid-template-columns: repeat(2, 1fr); }
-  .gal-grid { grid-template-columns: repeat(2, 1fr); }
-  .gi:nth-child(1) { grid-column: 1 / -1; }
-  .gi:nth-child(6) { grid-column: 1 / -1; }
-}
-
-.ci-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  cursor: pointer;
-}
-.ci-link:hover {
-  background: rgba(242,196,206,.18) !important;
-  border-color: rgba(242,196,206,.4) !important;
-  transform: translateY(-2px);
-}
-.ci-play {
-  display: inline-block;
-  font-size: 11px;
-  color: var(--blush, #F2C4CE);
-  background: rgba(242,196,206,.18);
-  border: 1px solid rgba(242,196,206,.4);
-  border-radius: 50px;
-  padding: 2px 10px;
-  margin-left: 6px;
-  vertical-align: middle;
-  font-weight: 500;
-  letter-spacing: .02em;
-}
-
-/* ── VIDEO ── */
-.video-wrap { background: white; }
-.video-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.video-card {
-  text-decoration: none;
-  color: inherit;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(232,132,154,.2);
-  transition: transform .3s, box-shadow .3s;
-  display: block;
-}
-.video-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(232,132,154,.3);
-}
-.video-thumb {
-  position: relative;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  background: linear-gradient(135deg, #FAE8EC 0%, #F5D5DC 50%, #EEC8D2 100%);
-  display: flex; align-items: center; justify-content: center;
-}
-.play-btn {
-  width: 58px; height: 58px;
-  background: rgba(200,96,122,.9);
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: white; font-size: 20px;
-  box-shadow: 0 6px 20px rgba(200,96,122,.45);
-  transition: background .3s, transform .3s;
-}
-.video-card:hover .play-btn {
-  background: var(--pink-dk);
-  transform: scale(1.12);
-}
-.video-label {
-  padding: 12px 14px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--mid);
-  text-align: center;
-  background: white;
-}
-
-@media (max-width: 640px) {
-  .video-grid { grid-template-columns: 1fr; gap: 12px; }
-}
-@media (min-width: 641px) and (max-width: 900px) {
-  .video-grid { grid-template-columns: 1fr 1fr; }
-}
-
+.contact{border-top:1px solid var(--line);padding:56px 0;text-align:center;font-size:.9rem;color:var(--sub)}
+.contact .links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 28px;margin-top:14px;color:var(--ink)}
+.contact .links a:hover{color:var(--accent)}
+footer{color:var(--faint);font-size:.75rem;letter-spacing:.06em;text-align:center;padding:0 24px 40px}
 </style>
 </head>
 <body>
 
-<!-- ══ HERO ══ -->
-<div class="hero">
-  <div class="hero-left">
-    <div class="badge"><b>✦</b> 아나운서 출신 · 돌잔치 전문 사회자</div>
-    <h1 class="hero-title">
-      소중한 우리 아기의<br>
-      첫 번째 생일,<br>
-      <em>진심으로 빛내드립니다.</em>
-    </h1>
-    <p class="hero-en">장진연 · 진행 / 사회자 / MC</p>
-    <p class="hero-desc">
-      경험에서 우러나오는 센스 있는 애드리브와 따뜻한 목소리로
-      <strong>감동은 더하고, 어색함은 덜어냅니다.</strong><br>
-      아나운서의 편안한 진행으로
-      진심이 오가는 특별한 하루를 만들어드립니다.
-    </p>
-    <a href="https://open.kakao.com/me/jinyeon" class="hero-cta" target="_blank">
-      💬 카카오 오픈채팅으로 문의하기
-    </a>
+<header>
+  <div class="wrap">
+    <span class="label">Announcer · MC</span>
+    <h1>아나운서 장진연</h1>
+    <p>경제방송 아나운서 출신 · 제이와이 보이스랩 대표</p>
   </div>
-  <div class="hero-right">
-    <img class="hero-photo" src="profile_1014.jpeg" alt="사회자 장진연">
-    <div class="hero-nametag">
-      <div class="nm">장진연</div>
-      <div class="rl">진행 / 사회자 / MC</div>
-    </div>
-    <div class="star-badge">
-      <span>⭐⭐⭐⭐⭐</span>
-      <span class="sn">5.0</span>
-      <span>만점</span>
-    </div>
-  </div>
-</div>
+</header>
 
-<div class="divider">✦ ✦ ✦</div>
+<main class="wrap cards">
+  <a class="card dol" href="dol.html">
+    <div class="ph"><img src="mid_2.jpeg" alt="돌잔치 진행 현장" style="object-position:center 60%"></div>
+    <div class="body">
+      <span class="label">First Birthday</span>
+      <h2>돌잔치 사회</h2>
+      <p>아이의 첫 생일을 따뜻하고 품격 있게.<br>현장 사진, 영상, 고객 후기를 확인해 보세요.</p>
+      <span class="go">자세히 보기 →</span>
+    </div>
+  </a>
+  <a class="card" href="event.html">
+    <div class="ph"><img src="images/f-podium.jpg" alt="기업행사 진행 현장" style="object-position:center 30%"></div>
+    <div class="body">
+      <span class="label">Corporate Event</span>
+      <h2>기업 · 공공기관 행사</h2>
+      <p>포럼, 시상식, 네트워킹 행사 전문 MC.<br>계산서 발행 가능합니다.</p>
+      <span class="go">자세히 보기 →</span>
+    </div>
+  </a>
+</main>
 
-<!-- ══ INTRO ══ -->
-<div class="intro-wrap">
-  <div class="sec">
-    <div class="intro-grid">
-      <div>
-        <span class="sec-label">선택 이유</span>
-        <h2 class="sec-title">왜 장진연<br>사회자여야 할까요?</h2>
-        <p class="intro-desc">
-          돌잔치는 단순한 파티가 아닙니다.
-          아이의 <strong>첫 번째 생일</strong>이라는 단 한 번의 순간,
-          가족 모두가 함께 만드는 <strong>평생의 기억</strong>입니다.<br><br>
-          아나운서로서 쌓아온 경험과
-          수십 번의 현장 노하우로
-          어떤 상황에도 흔들리지 않는
-          <strong>안정감 있고 따뜻한 진행</strong>을 약속드립니다.
-        </p>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <div class="ci">🎙️</div>
-          <div>
-            <h3>아나운서 출신</h3>
-            <p>서울경제TV, EYTV 경제방송 진행자. 검증된 마이크 실력과 안정적인 발성.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="ci">💐</div>
-          <div>
-            <h3>돌잔치 구성 서포트</h3>
-            <p>시나리오부터 이벤트까지 돌잔치에 필요한 전반적인 구성을 함께 고민하고 만들어 갑니다 :)</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="ci">🌸</div>
-          <div>
-            <h3>깔끔하고 따뜻한 진행</h3>
-            <p>시끌벅적함 대신 진심이 오가는 분위기, 가족 모두가 편안히 웃는 자리.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="ci">⚡</div>
-          <div>
-            <h3>빠른 응대 · 꼼꼼한 준비</h3>
-            <p>요청사항 100% 반영, 돌발상황에도 당황 없이 침착하게 행사를 완성.</p>
-          </div>
-        </div>
-      </div>
+<section class="contact">
+  <div class="wrap">
+    섭외 문의
+    <div class="links">
+      <a href="tel:01056209762">010-5620-9762</a>
+      <a href="mailto:jinyeon02@naver.com">jinyeon02@naver.com</a>
+      <a href="https://open.kakao.com/me/jinyeon" target="_blank" rel="noopener">카카오 오픈채팅</a>
+      <a href="https://instagram.com/jin_ection" target="_blank" rel="noopener">@jin_ection</a>
     </div>
   </div>
-</div>
-
-<!-- ══ CAREER ══ -->
-<div class="career-wrap">
-  <div class="career-inner">
-    <span class="sec-label">경력 및 이력</span>
-    <h2 class="sec-title">믿을 수 있는 검증된 이력</h2>
-    <div class="career-grid">
-      <a class="ci-box ci-link" href="https://youtu.be/GBj5M_4vGXs?si=6BFfHy8EvF1Hg05S" target="_blank"><div class="ci-num">01</div><h3>경제방송 아나운서 <span class="ci-play">▶ 영상 보기</span></h3></a>
-      <a class="ci-box ci-link" href="https://youtu.be/2SyFMaFfy_o?si=rKBN_wyZdKUNANII" target="_blank"><div class="ci-num">01</div><h3>공공기관 시험방송 아나운서 <span class="ci-play">▶ 영상 보기</span></h3></a>
-      <!-- <div class="ci-box"><div class="ci-num">02</div><h3>공공기관 시험방송 아나운서</h3></div> -->
-      <a class="ci-box ci-link" href="https://youtu.be/4e_0LBwC5WA" target="_blank"><div class="ci-num">03</div><h3>청소년 진로교육 출강 <span class="ci-play">▶ 영상 보기</span></h3></a>
-      <a class="ci-box ci-link" href="https://youtube.com/shorts/z8U5Cjk9iG8?si=GAuRI7MwIYIQDMyY" target="_blank"><div class="ci-num">03</div><h3>기업 행사 진행 <span class="ci-play">▶ 영상 보기</span></h3></a>
-
-    </div>
-    <div class="tags">
-      <span class="tag">✓ 시간 엄수</span>
-      <span class="tag">✓ 요청사항 100% 반영</span>
-      <span class="tag">✓ 돌발상황 즉각 대처</span>
-      <span class="tag">✓ 빠른 응답</span>
-      <span class="tag">✓ 친절한 소통</span>
-      <span class="tag">✓ 경기도 출장 가능</span>
-    </div>
-  </div>
-</div>
-
-<!-- ══ GALLERY ══ -->
-<div class="gal-wrap">
-  <div class="sec">
-    <span class="sec-label">현장 갤러리</span>
-    <h2 class="sec-title">현장 사진</h2>
-    <div class="gal-grid">
-      <div class="gi"><img src="mid_1.jpeg" alt="돌잔치 진행"><div class="gi-overlay"></div></div>
-      <div class="gi"><img src="mid_2.jpeg" alt="돌잔치 진행"><div class="gi-overlay"></div></div>
-      <div class="gi"><img src="mid_3.jpeg" alt="돌잔치 현장"><div class="gi-overlay"></div></div>
-      <div class="gi"><img src="mid_4.png" alt="돌상 진행"><div class="gi-overlay"></div></div>
-      <div class="gi"><img src="mid_5.jpeg" alt="돌잔치 진행"><div class="gi-overlay"></div></div>
-      <div class="gi"><img src="mid_6.png" alt="야외 돌잔치"><div class="gi-overlay"></div></div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══ VIDEO ══ -->
-<div class="video-wrap">
-  <div class="sec">
-    <span class="sec-label">진행 영상</span>
-    <h2 class="sec-title">영상으로 만나보세요</h2>
-    <div class="video-grid">
-      <a class="video-card" href="https://youtu.be/po4YhF1Q2HM?si=v_1SdXipHvfXgFLC" target="_blank">
-        <div class="video-thumb">
-          <div class="play-btn">▶</div>
-        </div>
-        <p class="video-label">돌잔치 이벤트 참고 영상</p>
-      </a>
-
-
-      <a class="video-card" href="https://youtu.be/KU7KPuIVnuM" target="_blank">
-        <div class="video-thumb">
-          <div class="play-btn">▶</div>
-        </div>
-        <p class="video-label">돌잔치 마무리 멘트</p>
-      </a>
-      <a class="video-card" href="https://youtu.be/9F_WZmojDHI" target="_blank">
-        <div class="video-thumb">
-          <div class="play-btn">▶</div>
-        </div>
-        <p class="video-label">호텔 돌잔치 오프닝</p>
-      </a>
-      <a class="video-card" href="https://youtu.be/-TPkwJRcmNE" target="_blank">
-        <div class="video-thumb">
-          <div class="play-btn">▶</div>
-        </div>
-        <p class="video-label">소규모 돌잔치 진행 영상</p>
-      </a>
-    </div>
-  </div>
-</div>
-
-<!-- ══ SKILLS ══ -->
-<div class="skills-wrap">
-  <div class="sec">
-    <div class="skills-grid">
-      <div>
-        <span class="sec-label">역량</span>
-        <h2 class="sec-title">사회자 역량 지표</h2>
-        <div class="bar-list">
-          <div><div class="bar-top"><span class="bar-label">신뢰감</span><span class="bar-pct">100%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
-          <div><div class="bar-top"><span class="bar-label">편안함</span><span class="bar-pct">100%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
-          <div><div class="bar-top"><span class="bar-label">깔끔함</span><span class="bar-pct">100%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
-          <div><div class="bar-top"><span class="bar-label">전달력</span><span class="bar-pct">100%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
-          <div><div class="bar-top"><span class="bar-label">진행력</span><span class="bar-pct">100%</span></div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div></div>
-        </div>
-      </div>
-      <div class="quote-box">
-        <p>
-          센스 있는 진행,<br>
-          깔끔한 진행.<br><br>
-          소중한 우리 아기의 첫 번째<br>
-          생일을 특별하게 빛내드립니다.
-        </p>
-        <div class="attr">— 사회자 장진연</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="rev-wrap">
-  <div class="sec">
-    <span class="sec-label">실제 후기</span>
-    <h2 class="sec-title">고객님들의 진짜 후기</h2>
-    
-    <div class="rev-slider-container">
-      <div class="rev-grid">
-
-        <div class="rev-img-card">
-          <img src="bot_11.jpeg" alt="고객 후기 1">
-        </div>
-        <div class="rev-img-card">
-          <img src="bot_12.jpeg" alt="고객 후기 1">
-        </div>
-        <div class="rev-img-card">
-          <img src="bot_13.jpeg" alt="고객 후기 1">
-        </div>
-        <div class="rev-img-card">
-          <img src="bot_14.jpeg" alt="고객 후기 1">
-        </div>
-        <div class="rev-img-card">
-          <img src="bot_15.jpeg" alt="고객 후기 1">
-        </div>
-
-
-        <div class="rev-img-card">
-          <img src="bot_1.jpeg" alt="고객 후기 1">
-        </div>
-        
-        <div class="rev-img-card">
-          <img src="bot_2.jpeg" alt="고객 후기 2">
-        </div>
-        
-        <div class="rev-img-card">
-          <img src="bot_3.jpeg" alt="고객 후기 3">
-        </div>
-
-        <div class="rev-img-card">
-          <img src="bot_4.jpeg" alt="고객 후기 4">
-        </div>
-
-      </div>
-    </div>
-    
-  </div>
-</div>
-<!-- ══ CTA ══ -->
-<div class="cta-wrap">
-  <div class="cta-inner">
-    <span class="sec-label">문의하기</span>
-    <h2 class="cta-title">
-      아이의 특별한 순간을 위해<br>
-      진심을 다합니다.
-    </h2>
-    <p class="cta-desc">
-      주말 예약은 빠르게 마감되고 있습니다 🙏<br>
-      소중한 날짜를 놓치지 않도록 미리 연락 주세요.
-    </p>
-    <a href="https://open.kakao.com/me/jinyeon" class="cta-btn" target="_blank">
-      💬 카카오 오픈채팅으로 상담 신청
-    </a>
-    <p class="cta-sub">
-      이메일 문의: <a href="mailto:jinyeon02@naver.com">jinyeon02@naver.com</a>
-    </p>
-  </div>
-</div>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <p>사회자 장진연 · jinyeon02@naver.com · <a href="https://open.kakao.com/me/jinyeon" target="_blank">카카오 오픈채팅</a></p>
-</footer>
+</section>
+<footer>© 2026 JY VOICE LAB · ANNOUNCER JANG JINYEON</footer>
 
 </body>
 </html>
